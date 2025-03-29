@@ -1,50 +1,56 @@
-# Welcome to your Expo app 👋
+# Weather App (React Native)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Overview
+This is a React Native application that fetches and displays weather data based on user input. It follows the MVVM architecture for better maintainability and separation of concerns. The app also supports offline caching and pull-to-refresh functionality.
 
-## Get started
+## Features
+- Search for weather details of any city.
+- Display temperature, humidity, wind speed, and weather conditions.
+- Offline caching of last searched weather data.
+- Pull-to-refresh functionality to update weather data.
+- Clean and maintainable MVVM architecture.
 
-1. Install dependencies
-
-   ```bash
+## Installation
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/your-repo/weather-app.git
+   cd weather-app
+   ```
+2. Install dependencies:
+   ```sh
    npm install
    ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
+3. Add your OpenWeatherMap API Key in `WeatherScreen.js`:
+   ```js
+   const API_KEY = "YOUR_API_KEY";
+   ```
+4. Run the application:
+   ```sh
+   npx react-native run-android  # For Android
+   npx react-native run-ios      # For iOS (Mac only)
    ```
 
-In the output, you'll find options to open the app in a
+## Technologies Used
+- React Native
+- Axios (for API calls)
+- AsyncStorage (for offline caching)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+## File Structure
+```
+/weather-app
+│── src
+│   ├── components
+│   ├── viewmodels
+│   ├── views
+│   ├── models
+│   ├── App.js
+│── package.json
+│── README.md
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## License
+This project is licensed under the MIT License.
 
-## Learn more
+## Author
+Developed by [Shreyak](https://github.com/Shreyakkk).
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
